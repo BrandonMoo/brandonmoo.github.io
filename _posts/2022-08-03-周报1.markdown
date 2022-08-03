@@ -22,8 +22,24 @@
 
 ![image](./images/wolun1.png)
 
-存在问题，vtkMapper没展示读取的温度信息的颜色。
+存在问题：vtkMapper没展示读取的温度信息的颜色。
+
+后续改进：尝试scalarbar和lookuptable显示温度。
+
 
 3. 曲面重建部分，尝试使用vtkSurfaceReconstructionFilter以及
-vtkExtractSurface
+vtkExtractSurface。
+
+前者使用等值面来构建曲面，但运行报错：内存错误
+第二个算法待进一步尝试。
+
+```
+2022-08-03 17:02:55.709 ( 180.841s) [                ]vtkGenericDataArray.txx:389    ERR| vtkFloatArray (00000213370A5480): Unable to allocate 1636945881102 elements of size 4 bytes. 
+ERROR: In e:\vtk9.0.1\vtk-9.0.1\common\core\vtkGenericDataArray.txx, line 389
+vtkFloatArray (00000213370A5480): Unable to allocate 1636945881102 elements of size 4 bytes. 
+
+17:03:03: 程序异常结束。
+17:03:03: The process was ended forcefully.
+17:03:04: E:\Code\output\bin\Design.exe crashed.
+```
 
