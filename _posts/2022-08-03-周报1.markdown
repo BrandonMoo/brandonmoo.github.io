@@ -1,0 +1,29 @@
+## AIAD 智能评估展示进度
+---
+2022.08.03 慕朝壬
+
+1. 需求描述： 完成AIAD软件涡轮机部分的智能评估页面的三维展示。要求使用vtk+qt代替pyvista，将三维点云重建为曲面并在qt窗口展示。展示文件源为三维点数据集，
+每行为第i个点的x,y,z,Temperature，文件格式为txt/csv。
+
+
+
+
+1. 使用vtkParticleReader完成对叶片三维数据的读取：
+
+```
+// This reads ascii files where each line consists of points with its
+// position (x,y,z) and (optionally) one scalar.
+
+  vtkNew<vtkParticleReader> reader;
+  reader->SetFileName(filePath.c_str());
+  reader->SetDataByteOrderToBigEndian();
+  reader->Update();
+```
+
+![image](./images/wolun1.png)
+
+存在问题，vtkMapper没展示读取的温度信息的颜色。
+
+3. 曲面重建部分，尝试使用vtkSurfaceReconstructionFilter以及
+vtkExtractSurface
+
