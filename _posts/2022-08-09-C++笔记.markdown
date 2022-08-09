@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "C++ Update"
+date:   2022-08-09 17:13:14 +0800
+categories: regular update
+---
+
+## 二维容器初始化 
+---
+1. vector<vector\<int> > vector1; 
+2. vector<vector\<int> > vector1(rows, vector\<int>(cols, value));
+ //rows和cols对应m*n的m和n
+3. vector<vector\<int> > vector1();
+
+## 容器排序 sort() ~ Nlog(N)
+```
+vector<int> v1;
+sort(v1.begin(), v1.end());
+```
+P.S. 
+
+在python中排序为`v1.sort()`
+
+在c中为`qsort(&v1[0], n, sizeof(int), compare);`
