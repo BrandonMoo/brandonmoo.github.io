@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "AIAD项目进度"
+date:   2022-08-03 20:13:14 +0800
+categories: regular update
+---
+
 ## AIAD 智能评估展示进度
 ---
 2022.08.03 慕朝壬
@@ -20,11 +27,13 @@
   reader->Update();
 ```
 
-![image](./images/wolun1.png)
+![image](./wolun1.png)
 
 存在问题：vtkMapper没展示读取的温度信息的颜色。
 
 后续改进：尝试scalarbar和lookuptable显示温度。
+
+解决办法：使用了mapper->setScalarRange(min, max)
 
 
 3. 曲面重建部分，尝试使用vtkSurfaceReconstructionFilter以及
