@@ -22,3 +22,15 @@ P.S.
 在python中排序为`v1.sort()`
 
 在c中为`qsort(&v1[0], n, sizeof(int), compare);`
+
+## C++ 11 容器初始化
+
+可以使用{}初始化容器：
+```
+// 传统
+int a[] = { 1, 2, 3 }; 
+// 新特性
+int b[]{2, 3, 4}; 
+vector<int> c{ 1, 2, 3 };
+map<int, float> d = {{ 1, 1.0f }, { 2, 2.0f }, { 3, 3.0f } };
+```
