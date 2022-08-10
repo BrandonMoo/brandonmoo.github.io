@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Python 笔记"
+date:   2022-08-10 11:13:14 +0800
+categories: regular update
+---
+
+## 交换swap写法
+```
+i, j = j, i
+"""内在原理     
+    c = j, i
+    i, j = c
+"""
+```
+
+## List操作
+
+1. len(list1) 求长度
+
+2. .append(int1) 添加
+
+3. list1 + list2 组合
+
+4. list1[1:1] == [] 分片：前闭后开；
+list[-1:-n] 负数offset从-1开始而非0
+
+## 逻辑或、与、非
+{or, and ,not}
